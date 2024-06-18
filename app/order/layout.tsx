@@ -1,18 +1,16 @@
-import { OrderSidebar } from "@/components/order/OrderSidebar";
-import { OrderSummary } from "@/components/order/OrderSummary";
+import { OrderSidebar } from '@/components/order/OrderSidebar';
+import { OrderSummary } from '@/components/order/OrderSummary';
 
-export default function RootLayout({children}: Readonly<{children: React.ReactNode }>) {
-    return (
-        <>
-            <div className="md:flex gap-2">
-                <OrderSidebar />
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return (
+    <>
+      <div className="gap-2 md:flex">
+        <OrderSidebar />
 
-                <main className="md:flex-1 md:h-screen md:overflow-y-scroll p-5 bg-gray-100">
-                    {children}
-                </main>
+        <main className="bg-gray-100 p-5 md:h-screen md:flex-1 md:overflow-y-scroll">{children}</main>
 
-                <OrderSummary />
-            </div>
-        </>
-    )
+        <OrderSummary />
+      </div>
+    </>
+  );
 }

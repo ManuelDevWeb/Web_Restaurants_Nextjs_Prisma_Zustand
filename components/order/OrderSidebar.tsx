@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const OrderSidebar = () => {
-  return (
-    <aside className='md:w-72 md:h-screen bg-white'>
-        Order Sibedar
-    </aside>
-  )
-}
+  return <aside className="bg-white md:h-screen md:w-72">Order Sibedar</aside>;
+};
 
-export {OrderSidebar}
+export { OrderSidebar };
